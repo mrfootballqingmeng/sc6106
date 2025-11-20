@@ -11,5 +11,9 @@ def main():
     user_name = request.form['user_name']
     print(user_name)
     return render_template('main.html')
+
+@app.route('/paynow', methods=['POST'])
+def paynow():
+    return render_template('paynow.html')
 if __name__ == '__main__':
     app.run(debug=True)
